@@ -162,13 +162,20 @@ header {
 
 .container {
   display: grid;
-  grid-template-rows: 8rem 70vh repeat(9, min-content);
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-rows: 8rem 80vh repeat(9, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
 h1 {
-  font-size: 8.8rem;
+  font-size: 7.2rem;
   font-weight: bold;
   color: white; }
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 200;
+  color: #444444;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem; }
 
 h3 {
   font-size: 2.4rem;
@@ -180,7 +187,7 @@ h3 {
   grid-column: full-start / full-end;
   z-index: 10000;
   display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
   .nav_main {
     grid-column: center-start / center-end; }
     .nav_main-content {
@@ -210,18 +217,6 @@ h3 {
     margin-top: 5rem;
     width: 100%; }
 
-.project-1 {
-  background-color: orangered;
-  grid-column: center-start / center-end; }
-
-.project-2 {
-  background-color: fuchsia;
-  grid-column: center-start / center-end; }
-
-.project-3 {
-  background-color: orange;
-  grid-column: center-start / center-end; }
-
 .footer {
   background-color: grey;
   grid-column: full-start / full-end; }
@@ -231,7 +226,7 @@ h3 {
   background-image: url(../../img/home/home-jumbotron.png);
   background-size: cover;
   display: grid;
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: [row-start1] 1fr [row-end1 row-start2] 1fr [row-end2 row-start3] min-content [row-end3 row-start4] 1fr [row-end4]; }
   .header__h1 {
     grid-column: center-start / center-end;
@@ -284,3 +279,67 @@ h3 {
       border: line 1px grey; }
   .designs img {
     width: 48%; }
+
+.project__title {
+  margin-top: 4.8rem;
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  grid-column: center-start / center-end; }
+
+.project__1 {
+  grid-column: center-start / center-end;
+  grid-row: 6 / 7;
+  display: grid;
+  grid-template-rows: [row-start1] 1fr [row-end1 row-start2] min-content [row-end2];
+  grid-template-columns: repeat(3, [col-start] minmax(min-content 1fr) [col-end]); }
+  .project__1--head {
+    grid-row: row-start2 / row-end2; }
+
+.project__1 > img,
+.project__2 > img,
+.project__3 > img {
+  object-fit: cover;
+  width: 100%;
+  grid-column: col-start1 / col-end3; }
+
+.project__1--head,
+.project__3--head {
+  grid-column: col-start3 / col-end3;
+  background-color: lightgray;
+  padding: 2rem;
+  width: 33%;
+  text-align: center;
+  transform: translateY(-50%);
+  justify-self: end; }
+
+.project__1--text,
+.project__2--text,
+.project__3--text {
+  grid-column: 4 / 8;
+  padding-bottom: 3.2rem; }
+
+.project__2 {
+  grid-column: center-start / center-end;
+  grid-row: 8 / 9;
+  display: grid;
+  grid-template-rows: [row-start1] 1fr [row-end1 row-start2] min-content [row-end2];
+  grid-template-columns: repeat(3, [col-start] minmax(min-content 1fr) [col-end]); }
+  .project__2--head {
+    grid-row: row-start2 / row-end2; }
+  .project__2 .project__2--head {
+    grid-column: col-start1 / col-end1;
+    background-color: lightgray;
+    padding: 2rem;
+    width: 33%;
+    text-align: center;
+    transform: translateY(-50%);
+    justify-self: start; }
+
+.project__3 {
+  grid-column: center-start / center-end;
+  grid-row: 10 / 11;
+  display: grid;
+  grid-template-rows: [row-start1] 1fr [row-end1 row-start2] min-content [row-end2];
+  grid-template-columns: repeat(3, [col-start] minmax(min-content 1fr) [col-end]); }
+  .project__3--head {
+    grid-row: row-start2 / row-end2; }
