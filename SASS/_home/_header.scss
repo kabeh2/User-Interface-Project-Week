@@ -1,8 +1,11 @@
 .header {
-  //   background-color: lightblue;
   grid-column: full-start / full-end;
   background-image: url(../../img/home/home-jumbotron.png);
   background-size: cover;
+  background-position: center;
+
+  // Create Grid Out of Header to Place H1 in Bottom
+  // Left Corner
   display: grid;
   grid-template-columns:
     [full-start] minmax(6rem, 1fr) [center-start] repeat(
@@ -11,10 +14,6 @@
     )
     [center-end] minmax(6rem, 1fr) [full-end];
   grid-template-rows: [row-start1] 1fr [row-end1 row-start2] 1fr [row-end2 row-start3] min-content [row-end3 row-start4] 1fr [row-end4];
-
-  //   &__img {
-  //     justify-self: center;
-  //   }
 
   &__h1 {
     grid-column: center-start / center-end;
