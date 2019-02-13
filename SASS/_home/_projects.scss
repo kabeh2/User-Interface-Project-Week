@@ -1,15 +1,21 @@
+// Project Title - Recent Projects
 .project__title {
-  // background-color: limegreen;
   margin-top: 4.8rem;
   padding-top: 3.2rem;
   padding-bottom: 3.2rem;
   grid-column: center-start / center-end;
+
+  h4 {
+    color: #444444;
+  }
 }
 
+// Image 1
 .project__1 {
-  //   background-color: firebrick;
   grid-column: center-start / center-end;
   grid-row: 6 / 7;
+
+  // Create New Grid from Container, same settings
   display: grid;
   grid-template-rows: [row-start1] 1fr [row-end1 row-start2] min-content [row-end2];
   grid-template-columns: repeat(
@@ -17,10 +23,13 @@
     [col-start] minmax(min-content 1fr) [col-end]
   );
 
+  // Header Block of Image 1
   &--head {
     grid-row: row-start2 / row-end2;
   }
 }
+
+// Settings for all Project Images
 .project__1 > img,
 .project__2 > img,
 .project__3 > img {
@@ -28,6 +37,8 @@
   width: 100%;
   grid-column: col-start1 / col-end3;
 }
+
+// Settings for 1st and 3rd Image Header Blocks
 .project__1--head,
 .project__3--head {
   grid-column: col-start3 / col-end3;
@@ -37,20 +48,33 @@
   text-align: center;
   transform: translateY(-50%);
   justify-self: end;
+
+  // Increase size of header block on mobile screens
+  @media only screen and (max-width: $bp-mobile) {
+    width: 60%;
+    padding: 1.25rem;
+  }
 }
 
+// Settings for all Text in Projects Section
 .project__1--text,
 .project__2--text,
 .project__3--text {
-  //   background-color: khaki;
-
   grid-column: 4 / 8;
-  padding-bottom: 3.2rem;
+  padding-bottom: 4.8rem;
+
+  // Convert to all 8 columns on mobile versions
+  @media only screen and (max-width: $bp-mobile) {
+    grid-column: center-start / center-end;
+  }
 }
+
+// Project 2 had to be separate for its image
 .project__2 {
-  //   background-color: firebrick;
   grid-column: center-start / center-end;
   grid-row: 8 / 9;
+
+  // Project 2 Container Using Own Grid
   display: grid;
   grid-template-rows: [row-start1] 1fr [row-end1 row-start2] min-content [row-end2];
   grid-template-columns: repeat(
@@ -58,10 +82,12 @@
     [col-start] minmax(min-content 1fr) [col-end]
   );
 
+  // Project 2 image header
   &--head {
     grid-row: row-start2 / row-end2;
   }
 
+  // Project 2 Header Block Settings
   .project__2--head {
     grid-column: col-start1 / col-end1;
     background-color: lightgray;
@@ -70,12 +96,21 @@
     text-align: center;
     transform: translateY(-50%);
     justify-self: start;
+
+    // Convert to larger block for Header 2
+    @media only screen and (max-width: $bp-mobile) {
+      width: 60%;
+      padding: 1.25rem;
+    }
   }
 }
+
+// Project 3
 .project__3 {
-  //   background-color: firebrick;
   grid-column: center-start / center-end;
   grid-row: 10 / 11;
+
+  // Project 3 Container Using Own Grid
   display: grid;
   grid-template-rows: [row-start1] 1fr [row-end1 row-start2] min-content [row-end2];
   grid-template-columns: repeat(
@@ -83,6 +118,7 @@
     [col-start] minmax(min-content 1fr) [col-end]
   );
 
+  // Project 3 Header Block Row Settings
   &--head {
     grid-row: row-start2 / row-end2;
   }

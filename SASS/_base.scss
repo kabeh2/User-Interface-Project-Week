@@ -4,8 +4,19 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+// RESPONSIVE BREAKPOINTS
+$bp-tab: 43.75em; //700px
+$bp-mobile: 36em; // 576px
+
 html {
   font-size: 62.5%;
+
+  // @media only screen and (max-width: $bp-tab) {
+  //   font-size: 50%;
+  // }
+  @media only screen and (max-width: $bp-mobile) {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -19,9 +30,9 @@ footer,
 ul,
 li,
 section,
-nav,
-header {
+nav {
   font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 
 .container {
