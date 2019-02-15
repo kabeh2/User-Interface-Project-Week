@@ -4,10 +4,6 @@
   padding-top: 3.2rem;
   padding-bottom: 3.2rem;
   grid-column: center-start / center-end;
-
-  h4 {
-    color: #444444;
-  }
 }
 
 // Image 1
@@ -42,7 +38,7 @@
 .project__1--head,
 .project__3--head {
   grid-column: col-start3 / col-end3;
-  background-color: lightgray;
+  background-color: $project-hbg;
   padding: 2rem;
   width: 33%;
   text-align: center;
@@ -51,7 +47,7 @@
 
   // Increase size of header block on mobile screens
   @media only screen and (max-width: $bp-mobile) {
-    width: 60%;
+    width: 100%;
     padding: 1.25rem;
   }
 }
@@ -90,7 +86,7 @@
   // Project 2 Header Block Settings
   .project__2--head {
     grid-column: col-start1 / col-end1;
-    background-color: lightgray;
+    background-color: $project-hbg;
     padding: 2rem;
     width: 33%;
     text-align: center;
@@ -99,7 +95,7 @@
 
     // Convert to larger block for Header 2
     @media only screen and (max-width: $bp-mobile) {
-      width: 60%;
+      width: 100%;
       padding: 1.25rem;
     }
   }

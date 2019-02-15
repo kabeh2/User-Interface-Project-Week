@@ -24,8 +24,8 @@
 
   <body class="container">
     <nav class="nav" id="nav">
-      <div class="nav_main">
-        <div class="nav_main-content">
+      <div class="nav__main">
+        <div class="nav__main-content">
           <a class="nav__logo" href="#">
             S&J
           </a>
@@ -85,7 +85,7 @@
         <img src="img/home/home-villas-img.png" alt="Villas">
 
         <div class="project__1--head">
-            <h2>The Villas</h2>
+            <h2 id="project_h2">The Villas</h2>
         </div>
       </div>
       
@@ -99,7 +99,7 @@
         <img src="img/home/home-outskirts-img.png" alt="Outskirts">
 
         <div class="project__2--head">
-            <h2>Outskirts</h2>
+            <h2 id="project_h2">Outskirts</h2>
         </div>
       </div>
       
@@ -113,7 +113,7 @@
         <img src="img/home/home-the-blocks-img.png" alt="Townhomes">
 
         <div class="project__3--head">
-            <h2>The Blocks</h2>
+            <h2 id="project_h2">The Blocks</h2>
         </div>
       </div>
       
@@ -125,49 +125,55 @@
 
       
       
-    <footer class="footer_container">
-      <div class="footer">
+    <footer class="footer">
+      <!-- <div class="footer_container"> -->
 
-        <div class="email_list">
-          <label for="email">
+            <div class="email_list">
+              <label for="email">
+      
+                <h3>Interested in starting a project? </br> Let's talk:</h3>
+              </label>
+              <input type="email" name="email" id="email" placeholder="Enter email">
+              <h6>We'll never share your email with anyone else.</h6>
+            </div>
   
-            <h3>Interested in starting a project? </br> Let's talk:</h3>
-          </label>
-          <input type="email" name="email" id="email" placeholder="Enter email">
-          <h6>We'll never share your email with anyone else.</h6>
-        </div>
-  
-        <div class="footer__ny">
-          <h3>New York</h3>
-          <address>
-            123 Lane <br>
-            Suite 100 <br>
-            Albany, NY 12345 <br>
-            202 555 0144
-          </address>        
-        </div>
-        <div class="footer__fl">
-          <h3>Florida</h3>
-          <address>
-              Ocean Drive <br>
-              Suite 201 <br>
-              Orlando, FL 22345 <br>
-              502 555 0144
-          </address>        
-        </div>
-        <div class="footer__ca">
-          <h3>California</h3>
-          <address>
-            Mountain Street <br>
-  Suite 105 <br>
-  San Diego, CA 22345 <br>
-  702 555 0144
-          </address>        
-        </div>
-        <div class="copyright">
-          Copyright &copy; 2019 Smith and Jones
-        </div>
-      </div>
+            <div class="footer__ny">
+              <h3>New York</h3>
+              <address>
+                123 Lane <br>
+                Suite 100 <br>
+                Albany, NY 12345 <br>
+                202 555 0144
+              </address>        
+            </div>
+
+
+            <div class="footer__fl">
+              <h3>Florida</h3>
+              <address>
+                  Ocean Drive <br>
+                  Suite 201 <br>
+                  Orlando, FL 22345 <br>
+                  502 555 0144
+              </address>        
+            </div>
+
+
+            <div class="footer__ca">
+              <h3>California</h3>
+              <address>
+                Mountain Street <br>
+      Suite 105 <br>
+      San Diego, CA 22345 <br>
+      702 555 0144
+              </address>        
+            </div>
+
+
+            <div class="copyright">
+              Copyright &copy; 2019 Smith and Jones
+            </div>
+      <!-- </div> -->
     </footer>
 
   
