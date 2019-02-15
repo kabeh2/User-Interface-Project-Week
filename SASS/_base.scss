@@ -5,7 +5,7 @@ body {
 }
 
 // RESPONSIVE BREAKPOINTS
-$bp-tab: 43.75em; //700px
+$bp-tab: 50em; //800px
 $bp-mobile: 36em; // 576px
 
 html {
@@ -30,7 +30,8 @@ footer,
 ul,
 li,
 section,
-nav {
+nav,
+button {
   font-size: 1.6rem;
   line-height: 2.4rem;
 }
@@ -44,4 +45,14 @@ nav {
       [col-start] minmax(min-content, 10rem) [col-end]
     )
     [center-end] minmax(6rem, 1fr) [full-end];
+
+  @media only screen and (max-width: $bp-mobile) {
+    grid-template-rows: 8rem 40vh repeat(9, min-content);
+    grid-template-columns:
+      [full-start] minmax(2.4rem, 1fr) [center-start] repeat(
+        8,
+        [col-start] minmax(min-content, 10rem) [col-end]
+      )
+      [center-end] minmax(2.4rem, 1fr) [full-end];
+  }
 }
